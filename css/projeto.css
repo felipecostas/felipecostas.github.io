@@ -1,0 +1,131 @@
+.projeto {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.projeto .subtitulo {
+  font-family: "Playfair Display", Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+.projeto-texto {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  color: #525252;
+}
+
+.projeto-texto strong {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: #141414;
+}
+
+.aplicacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.aplicacao::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#a839ff, #701cda);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.aplicacao-ano {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  position: absolute;
+  top: 22px;
+  left: -100px;
+  text-align: right;
+  width: 80px;
+  color: #525252;
+  font-size: 0.875rem;
+}
+
+.aplicacao-titulo {
+  font-family: "Playfair Display", Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.aplicacao-texto {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #525252;
+}
+
+.aplicacao-linguagem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+}
+
+.aplicacao-linguagem li {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 5px 10px;
+}
+.btn-proj {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background: #141414;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  border-radius: 4px;
+}
+
+.btn-proj:hover {
+  background: #525252;
+}
+
+.btn-proj a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media (max-width: 800px) {
+  .projeto {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .projeto .subtitulo {
+    color: #141414;
+  }
+  .projeto-texto {
+    font-size: 1.25rem;
+  }
+  .aplicacao-ano {
+    position: initial;
+    order: 1;
+    width: initial;
+    text-align: left;
+  }
+}
+
+@media (max-width: 400px) {
+  .aplicacao {
+    grid-template-columns: 1fr;
+  }
+}
